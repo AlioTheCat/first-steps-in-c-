@@ -20,8 +20,6 @@ void minmax(int* tab, int size, int* min, int* max){
     }
 }
 
-//void nb_occ{string mot}{};
-
 
 int main()
 {
