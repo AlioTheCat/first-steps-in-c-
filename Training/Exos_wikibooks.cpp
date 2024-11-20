@@ -1,11 +1,20 @@
 #include <iostream>
 using namespace std;
 
+/*
+Source : https://fr.wikibooks.org/wiki/Programmation_C%2B%2B/Les_pointeurs/Exercices
+*/
+
+
+// Exo1
+
 void swap(int* a, int* b){
     int tmp = *a;
     *a = *b;
     *b = tmp;
 };
+
+// Exo 2
 
 void minmax(int* tab, int size, int* min, int* max){
     *min = tab[0];
@@ -20,6 +29,19 @@ void minmax(int* tab, int size, int* min, int* max){
     }
 }
 
+int occurencesA(string mot){
+    char* curseur = &mot[0];
+    int count = 0;
+    while (*curseur != '\0') {
+        if (*(curseur++) == 'A') {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
 
 int main()
 {
@@ -30,5 +52,6 @@ int main()
     int* max= &b;
     minmax(l, 7, &a, &b);
     cout << *min << endl << *max << endl;
+    cout << occurencesA("AndzudiAzudibzdAeufyvuzefAeiufz");
     return 0;
 }
