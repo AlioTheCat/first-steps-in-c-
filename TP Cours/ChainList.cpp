@@ -49,11 +49,6 @@ public:
     void set_isempty(bool p){
         empty = p;
     }
-
-    /*
-    Maillon operator=(Maillon m){
-
-    }*/
 };
 
 
@@ -63,6 +58,7 @@ class ChainList
         Maillon* head;
         int size;
     public:
+        
         ChainList(){
             head = new Maillon ();
             size = 0;
